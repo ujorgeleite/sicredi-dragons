@@ -7,7 +7,7 @@ import { DragonDetailComponent } from './Shared/components/dragon-detail/dragon-
 const routes: Routes = [
   { path: '', redirectTo: '/list', pathMatch: 'full' },
   { path: 'list', component: ListComponent },
-  { path: 'detail', component: DragonDetailComponent },
+  { path: 'detail/:id', component: DragonDetailComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,8 @@
 @import "../../../../variables.scss";
 
+a{
+  text-decoration:none;
+}
 
 .dragons-card-title {
   color: #ffffff;
@@ -7,6 +10,7 @@
   font-size: 24px;
   font-weight: 700;
   margin-top: 1.5em;
+  border: none;
 }
 
 .dragons-card-separator-container {
@@ -15,12 +19,14 @@
 
 .dragons-card-icon-container {
   padding: 0px;
+  margin-top: 1em;
 }
 
 .dragons-card-container {
   border-top: 3px solid $second-color;
   margin-bottom: 2em;
   background-color: rgba(14, 14, 14, 0.68);
+  transition: ease-in all 0.5s;
 }
 
 .dragons-card-container:hover {
@@ -55,8 +61,7 @@
     color: $second-color;
   }
 
-  &.trash{
+  &.trash {
     color: red;
   }
 }
-

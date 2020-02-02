@@ -1,6 +1,8 @@
 <div class="dragons-card-container card">
-  <div class="text-center dragons-card-icon-container col-lg-12 col-md-12 col-sm-12">
-    <img class="card-img-top col-lg-6 col-md-6 col-sm-6" src="../../../assets/dragao.png"></div>
+  <a [routerLink]="['/detail',dragon?.id]">
+    <div class="text-center dragons-card-icon-container col-lg-12 col-md-12 col-sm-12">
+      <img class="card-img-top col-lg-6 col-md-6 col-sm-6" src="../../../assets/dragao.png"></div>
+  </a>
   <div class="card-body">
     <p class="dragons-card-label text-center">{{dragon?.type | uppercase }}</p>
     <div class="mx-auto dragons-card-separator-container col-lg-8 col-md-8 col-sm-12">
@@ -28,4 +30,5 @@
       </app-remove-dragon>
     </div>
   </div>
+
 </div>

@@ -6,6 +6,7 @@ export class DragonMapper {
     return new DragonViewModel(
       dragonResponse.name,
       dragonResponse.type,
+      dragonResponse.createdAt,
       dragonResponse.histories,
       dragonResponse.id);
   }

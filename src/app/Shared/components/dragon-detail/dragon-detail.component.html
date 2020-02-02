@@ -1,1 +1,24 @@
-<p>dragon-detail works!</p>
+<div class="container">
+  <div>
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-fluid" src="../../../assets/dragao.png" alt="">
+      </div>
+      <div class="col-md-6">
+        <h1 class="my-4 text-center">{{dragon?.name | uppercase}}
+        </h1>
+        <div class="col text-center">
+          <h3 class="col">Type</h3>
+          <p>{{dragon?.type | uppercase}}</p>
+        </div>
+        <div class="col text-center">
+          <h3 class="col">Created Date</h3>
+          <p>{{dragon?.createdDate | date}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row float-right">
+      <a [routerLink]="['/list']" class="btn btn-outline-light" routerLinkActive="router-link-active">Voltar</a>
+    </div>
+  </div>
+</div>
