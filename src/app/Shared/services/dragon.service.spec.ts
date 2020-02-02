@@ -32,7 +32,6 @@ describe('DragonService', () => {
 
 
   describe('Given that the method getAll is called', () => {
-
     it('Then the get method should be called', () => {
       spyOn(apiService, 'get').and.callFake(() => of({}));
       service.getAll();
@@ -52,7 +51,7 @@ describe('DragonService', () => {
     });
 
     it('Then the get method should be return a list of observables', async () => {
-      const date = new Date()
+      const date = new Date();
       const dragonsResponse: DragonResponseModel[] = [
         new DragonResponseModel('123', date, 'Djambudo', 'Small Dragon', [])
       ];
@@ -60,6 +59,7 @@ describe('DragonService', () => {
       const dragonsViewModel: DragonViewModel[] = [
         new DragonViewModel('Djambudo', 'Small Dragon', date, [], '123')
       ];
+
       spyOn(apiService, 'get').and.callFake(() => of(dragonsResponse));
       const returnedValue = await service.getAll().toPromise();
       expect(returnedValue).toEqual(dragonsViewModel);
@@ -68,7 +68,6 @@ describe('DragonService', () => {
 
 
   describe('Given that the method delete is called', () => {
-
     it('Then the delete method should be called', () => {
       spyOn(apiService, 'delete').and.callFake(() => of({}));
       service.delete('2');
@@ -89,7 +88,6 @@ describe('DragonService', () => {
   });
 
   describe('Given that the method getById is called with id param', () => {
-
     it('Then the getById method should be called', () => {
       spyOn(apiService, 'getById').and.callFake(() => of({}));
       service.getById('2');
@@ -109,7 +107,7 @@ describe('DragonService', () => {
     });
 
     it('Then the getById method should be return a list of observables', async () => {
-      const date = new Date()
+      const date = new Date();
       const dragonsResponse: DragonResponseModel =
         new DragonResponseModel('123', date, 'Djambudo', 'Small Dragon', []);
 
