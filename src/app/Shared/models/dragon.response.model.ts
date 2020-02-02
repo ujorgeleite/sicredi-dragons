@@ -1,7 +1,10 @@
 export class DragonResponseModel {
-  id: string;
-  createdAt: Date;
-  name: string;
-  type: string;
-  histories: string[] = [];
+
+  constructor(public id: string,
+              public createdAt: Date,
+              public name: string,
+              public type: string,
+              public histories: string[] = []) {
+
+  }
 }
