@@ -14,7 +14,7 @@ describe('DragonService', () => {
       ],
       providers: [
         DragonService,
-        { provide: ApiService, useValue: { get: {}, getById: {} } },
+        { provide: ApiService, useValue: { get: {}, getById: {}, delete: {} } },
 
       ]
     });
@@ -48,6 +48,27 @@ describe('DragonService', () => {
       service.getAll();
       expect(apiService.get).toHaveBeenCalledTimes(1);
     });
+  });
 
+
+  describe('Given that the method delete is called', () => {
+
+    it('Then the delete method should be called', () => {
+      spyOn(apiService, 'delete').and.callFake(() => of({}));
+      service.delete('2');
+      expect(apiService.delete).toHaveBeenCalled();
+    });
+
+    it('Then the get method should be called with id param', () => {
+      spyOn(apiService, 'delete').and.callFake(() => of({}));
+      service.delete('2');
+      expect(apiService.delete).toHaveBeenCalledWith('dragon/2');
+    });
+
+    it('Then the get method should be called one time', () => {
+      spyOn(apiService, 'delete').and.callFake(() => of({}));
+      service.delete('2');
+      expect(apiService.delete).toHaveBeenCalledTimes(1);
+    });
   });
 });

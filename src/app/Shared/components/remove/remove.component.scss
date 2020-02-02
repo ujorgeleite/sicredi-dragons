@@ -1,0 +1,30 @@
+@import "../../../../variables.scss";
+
+button {
+  font-weight: 600;
+
+  &.btn-secondary {
+    margin: 1em;
+  }
+
+  &.btn-info {
+    margin: 1em;
+  }
+
+  &:hover {
+    background: $main-color;
+    border-color: $main-color;
+  }
+}
+
+
+.remove-background {
+  margin-top: 1em;
+  margin-bottom: 0px;
+  .card-body {
+    background: #3aefa6;
+    color: $main-color;
+    border-radius: 0px;
+    font-weight: 600;
+  }
+}

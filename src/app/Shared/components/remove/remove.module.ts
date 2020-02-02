@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DragonDetailComponent } from './dragon-detail.component';
+import { RemoveComponent } from './remove.component';
 
 
 
 @NgModule({
   declarations: [
-    DragonDetailComponent
+    RemoveComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    DragonDetailComponent
+    RemoveComponent
   ]
 })
-export class DragonDetailModule { }
+export class RemoveModule { }

@@ -21,4 +21,8 @@ export class ApiService {
   getById(paramUrl: string): Observable<DragonResponseModel> {
     return this.httpClient.get<DragonResponseModel>(`${this.baseUrl}${paramUrl}`);
   }
+
+  delete(paramUrl: string): Observable<DragonResponseModel> {
+    return this.httpClient.delete<DragonResponseModel>(`${this.baseUrl}${paramUrl}`);
+  }
 }

@@ -17,11 +17,15 @@
         </a>
       </div>
       <div class="col text-left pl-2">
-        <a [routerLink]="['/remove',dragon?.id]" class="dragon-button trash" routerLinkActive="active">
+        <a href="#" data-toggle="collapse" [attr.data-target]="'#'+dragon.name+dragon.id" class="dragon-button trash">
           <fa-icon [icon]="faTrash">
           </fa-icon>
         </a>
       </div>
+    </div>
+    <div class="row">
+      <app-remove-dragon (reloader)="reloader($event)" [dragonName]="dragon.name" [dragonId]="dragon.id">
+      </app-remove-dragon>
     </div>
   </div>
 </div>

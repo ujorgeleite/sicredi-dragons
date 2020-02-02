@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { ApiService } from 'src/app/shared/services/api.service';
+import { ApiService } from 'src/app/Shared/services/api.service';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { DragonMapper } from 'src/app/shared/mappers/dragon.mapper';
-import { DragonViewModel } from 'src/app/shared/models/dragon.view.model';
+import { DragonMapper } from 'src/app/Shared/mappers/dragon.mapper';
+import { DragonViewModel } from 'src/app/Shared/models/dragon.view.model';
 import { ParamRequestModel } from '../models/param.request.model';
 import { RequestParamsMapper } from '../mappers/request-params.mapper';
 
@@ -14,7 +14,6 @@ import { RequestParamsMapper } from '../mappers/request-params.mapper';
 export class DragonService {
 
   constructor(private apiService: ApiService) {
-
   }
 
 
@@ -25,6 +24,11 @@ export class DragonService {
       .pipe(
         map(dragonsResponse =>
           dragonsResponse.map(dragonResponse => DragonMapper.mapResponseToViewModel(dragonResponse))));
+  }
+
+  delete(id: string) {
+    const url = `dragon/${id}`;
+    return from(this.apiService.delete(url));
   }
 }
 

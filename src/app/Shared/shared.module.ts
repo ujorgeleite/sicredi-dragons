@@ -7,6 +7,8 @@ import { DragonCardModule } from './components/dragon-card/dragon-card.module';
 import { ApiService } from './services/api.service';
 import { AppRoutingModule } from '../app-routing.module';
 import { DragonService } from './services/dragon.service';
+import { RemoveComponent } from './components/remove/remove.component';
+
 
 
 
@@ -16,12 +18,12 @@ import { DragonService } from './services/dragon.service';
     CommonModule,
     DragonDetailModule,
     DragonCardModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   exports: [
     [
       DragonDetailModule,
-      DragonCardModule
+      DragonCardModule,
     ]
   ],
   providers: [
