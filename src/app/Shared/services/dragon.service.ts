@@ -26,6 +26,14 @@ export class DragonService {
           dragonsResponse.map(dragonResponse => DragonMapper.mapResponseToViewModel(dragonResponse))));
   }
 
+
+  getById(id: string): Observable<DragonViewModel> {
+    const url = `dragon/${id}`;
+    return from(this.apiService.getById(url))
+      .pipe(map(dragonsResponse => DragonMapper.mapResponseToViewModel(dragonsResponse)));
+  }
+
+
   delete(id: string) {
     const url = `dragon/${id}`;
     return from(this.apiService.delete(url));
