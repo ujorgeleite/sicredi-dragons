@@ -51,4 +51,19 @@ What more could have been done?
 
 Screens: 
 
+Login
+(https://drive.google.com/drive/folders/1zoHZEKe9RAe-n9aP_hjgdeIXCVce_14Z)
+
+
+List
+(https://drive.google.com/drive/folders/1zoHZEKe9RAe-n9aP_hjgdeIXCVce_14Z)
+
+Remove
+(https://drive.google.com/drive/folders/1zoHZEKe9RAe-n9aP_hjgdeIXCVce_14Z)
+
+Edit
+(https://drive.google.com/drive/folders/1zoHZEKe9RAe-n9aP_hjgdeIXCVce_14Z)
+
+Detail
+(https://drive.google.com/drive/folders/1zoHZEKe9RAe-n9aP_hjgdeIXCVce_14Z)
 
