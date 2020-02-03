@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { DragonService } from '../../services/dragon.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class RemoveComponent implements OnInit {
   @Output() reloader: EventEmitter<any> = new EventEmitter();
 
 
-  constructor(private dragonService: DragonService) {
+  constructor(private dragonService: DragonService,
+              private toastService: ToastrService) {
   }
 
   ngOnInit() {
@@ -23,6 +25,7 @@ export class RemoveComponent implements OnInit {
   public deleteDragon(event, id: string) {
     this.dragonService.delete(id)
       .subscribe((res) => {
+        this.toastService.show(`Dragão ${res.name} excluido com sucesso`, 'Aviso');
         this.reloader.emit(null);
       });
   }
