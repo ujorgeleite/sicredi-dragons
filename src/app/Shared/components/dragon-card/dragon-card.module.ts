@@ -15,6 +15,7 @@ import { RemoveModule } from '../remove/remove.module';
   ],
   imports: [
     RemoveModule,
+    AppRoutingModule,
     CommonModule,
     FontAwesomeModule,
     AppRoutingModule,

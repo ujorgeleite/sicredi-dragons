@@ -1,0 +1,14 @@
+<div class="row" *ngIf="dragons.length > 0">
+  <app-dragon-card (reloaderDragons)="reloadDragons($event)" [dragon]="dragon"
+    class="col-sm-12 col-md-4 col-lg-4 mx-auto" *ngFor="let dragon of dragons;">
+  </app-dragon-card>
+</div>
+
+<div class="container" *ngIf="dragons.length == 0">
+  <div class="row">
+    <h1 class="col text-center">Sem registros</h1>
+  </div>
+  <div class="row">
+    <button class="btn btn-outline-light mx-auto" (click)="add()">Adicionar</button>
+  </div>
+</div>
