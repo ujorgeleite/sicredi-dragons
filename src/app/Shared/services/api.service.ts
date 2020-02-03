@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { DragonResponseModel } from '../models/dragon.response.model';
+import { DragonRequestModel } from '../models/dragon.request.model';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,13 @@ export class ApiService {
 
   delete(paramUrl: string): Observable<DragonResponseModel> {
     return this.httpClient.delete<DragonResponseModel>(`${this.baseUrl}${paramUrl}`);
+  }
+
+  put(paramUrl: string, dragon: DragonRequestModel): Observable<DragonResponseModel> {
+    return this.httpClient.put<DragonResponseModel>(`${this.baseUrl}${paramUrl}`, dragon);
+  }
+
+  post(paramUrl: string, dragon: DragonRequestModel): Observable<DragonResponseModel> {
+    return this.httpClient.post<DragonResponseModel>(`${this.baseUrl}${paramUrl}`, dragon);
   }
 }
